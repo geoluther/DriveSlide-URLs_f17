@@ -70,7 +70,17 @@ def main(files):
 	print html_partials.footer
 
 
+def test_funct(files):
+	d = date.today()
+	dayofweek = d.strftime("%A")
+
+	for file in files:
+		handle = get_handle(file)
+		print('file: ' + handle)
+		print('today: ' + dayofweek)
+
 if __name__ == "__main__":
 	files = [ name for name in sys.argv[1:] ]
 	# print files
 	main(files)
+	# test_funct(files)
