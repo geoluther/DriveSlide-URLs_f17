@@ -48,11 +48,13 @@ def build_list(file):
 	dayofweek = d.strftime("%A")
 	if handle == dayofweek:
 		collapse = "collapse show"
+
 	html += '<div class="{}" id="{}">'.format(collapse, handle)
 	html += '<h4>{}</h4>'.format(handle)
 	html += '<ul class="list-unstyled">'
 	html += build_links(file)
 	html += '</ul></div>'
+
 	return html
 
 
